@@ -1,11 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.rad-grad {
+    background-image: radial-gradient(white 5%, aqua 70%);
+}
+
+.aqua-background {
+    background-color: aqua;
 }
 
 #top {
     position: relative;
-    background-color: aqua;
     height: 720px;
 }
 
@@ -24,6 +32,7 @@
 .igc-card-2 {
     grid-row: 3 / 4;
     grid-column: 3 / 4;
+    padding: 0 30px 20px 0;
 }
 
 .intro-flex-container {
@@ -33,33 +42,17 @@
     height: 100%;
 }
 
-.ifc-card-1 {
-}
-
-.ifc-card-2 {
-}
-
 .rockstar-flex-container {
     display: flex;
     height: 100%;
     justify-content: flex-end;
     align-items: flex-end;
-
 }
 
-.rfc-card-1 {
-    padding: 0 30px 20px 0;
-}
-
-.heading {
+.heading, .subheading {
     font-family: 'engravers mt', 'Times New Roman', Times, serif;
     font-size: 2.5rem;
 }
-
-.subheading{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 
 .rockstar {
     height: 200px;
@@ -79,7 +72,61 @@
 }
 
 #profile-pic {
-    height: 200px;
+    height: 300px;
+}
+
+#profile-pic:hover {
+    filter: drop-shadow(0px 0px 25px aqua);
+}
+
+.contact-flex-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    height: 30px;
+}
+
+.icon:hover {
+    filter: invert(.5)
+            sepia(1)
+            saturate(23)
+            hue-rotate(145deg)
+            brightness(1)
+            drop-shadow(0px 0px 25px aqua);
+}
+
+#tent-div {
+    text-align: left;
+}
+
+.hobby-image {
+    height: 150px;
+    width: 225px;
+    border-radius: 10px;
+}
+
+#tent {
+    float: left;
+    margin-right: 20px;
+}
+
+#guitar-div {
+    text-align: right;
+}
+
+#guitar {
+    float: right;
+    margin-left: 20px;
+}
+
+.glow-button:hover {
+    background-color: aqua;
+    color: black;
+    filter: drop-shadow(0px 0px 25px aqua);
 }
 
 @media (max-width: 780px) {
@@ -106,19 +153,29 @@
     }
 
     .subheading {
-        font-size: 14pt;
+        font-size: 16pt;
     }
 
     .rockstar {
         animation: none;
     }
 
-    .rfc-card-1 {
+    .igc-card-2 {
         padding: 0;
     }
 
     #guitar-outline {
         height: 150px;
         margin-bottom: 10px;
+    }
+
+    #tent-div, #guitar-div {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #tent, #guitar {
+        float: none;
+        margin-bottom: 15px;
     }
 }
